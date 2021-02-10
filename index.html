@@ -20,6 +20,14 @@
 		background-color:rgb(211,211,211);
 		width:380px;
 		position:relative;
+		margin:10px;
+		}
+		
+		.met-img{
+		width:50px;
+		position:absolute;
+		top:30px;
+		left:140px;
 		}
 		
 		.tit, .para{
@@ -30,43 +38,42 @@
 		padding-top:10px;
 		}
 		
-		
-		.met-img{
-		width:50px;
-		position:absolute;
-		top:40px;
-		left:130px;
-		}
-		
-		.flex-fix {
-		width:380px;
-		flex:none;
-		}
-		
-		
-		.Met-villes{
+		.flex-met{
 		display:flex;
+		flex-wrap:wrap;
 		justify-content:space-around;
-		
 		}
-	  
-	  
+		
+		.flex-met div:nth-child(3){
+		flex-grow:30;
+		}
+		.flex-met div:nth-child(1){
+		flex-grow:1;
+		}
+		.flex-met div:nth-child(2){
+		flex-grow:1;
+		}
+		
 	  </style>
 	  
-	  <script>
-	  
+	  <script type="text/javascript">
+		function showCity(){
+			alert(villeCourante); 
+		};
+		let villeCourante = "Lyon"
 	  </script>
+	  
 	</head>
 	
-	<body>
+	<body onload="showCity()">
 		<h1 id="titre">TP Météo HTML</h1>
-		<div class="Met-villes">
-			<div class="villes flex-fix">
+		<div class="flex-met">
+			<div class="villes">
 				<h2 class="tit"> Abidjan </h2>
 				<p class="para"> 29°, ensoleillé. </p>
 				<img class="met-img" src="soleil.png" alt="Soleil">
 			</div>
-			<div class="villes flex-fix">
+			<div class="villes">
 				<h2 class="tit"> Paris </h2>
 				<p class="para"> -3°C, neige. </p>
 				<img class="met-img" src="neige.png" alt="Neige">
