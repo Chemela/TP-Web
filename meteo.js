@@ -14,16 +14,17 @@
 
 			// 3. Parcourir la liste des div et cacher celles qui ne sont pas sélectionnées.
 			// TODO : definir l : la taille max de votre tableau cities
-			var l = cities.length;
-			for (i=0; i<l; i++) { 
+			//var l = cities.length;
+			for (i=0; i<cities.length;; i++) { 
 			
-				if (VilleSelect ==""){
+				if (VilleSelect == ""){
 					cities[i].style.display= "";
+					
 				}else{
-				
-				if (cities[i].id == VilleSelect) {
-				  // garder l'element visible -> ELEMENT.style.display= "none";
-				  cities[i].style.display= "none";
+				if (cities[i].id != VilleSelect) {
+				   
+				   // garder l'element visible -> ELEMENT.style.display= "none";
+					cities[i].style.display= "none";
 				} else {
 				  // cacher l'element -> ELEMENT.style.display= "";
 				  //cities.style.visibility= "hidden";
