@@ -20,9 +20,6 @@
 		background-color:rgb(211,211,211);
 		width:380px;
 		position:relative;
-		/*padding-top:1px;
-		padding-bottom:3px;
-		margin:20px;*/
 		}
 		
 		.tit, .para{
@@ -39,29 +36,38 @@
 		position:absolute;
 		top:40px;
 		left:130px;
-		/*margin-left:20px;
-		padding-bottom:10px;*/
 		}
 		
-		.flex-fix {
-		width:380px;
-		flex:none;
-		}
-		
-		
-		.Met-villes{
+		.flex-met{
 		display:flex;
+		flex-wrap:wrap;
 		justify-content:space-around;
 		
+		.Met-villes div:nth-child(3){
+		flex-grow:30;
 		}
+		.Met-villes div:nth-child(1){
+		flex-grow:1;
+		}
+		.Met-villes div:nth-child(2){
+		flex-grow:1;
+		}
+		
+		}
+	</style>
 	  
+	  <script type="text/javascript">
+		function showCity(){
+			alert(villeCourante); 
+		};
+		let villeCourante = "Lyon";
+	  </script>
 	  
-	  </style>
 	</head>
 	
-	<body>
+	<body onload="showCity()">
 		<h1 id="titre">TP Météo HTML</h1>
-		<div class="Met-villes">
+		<div class="flex-met">
 			<div class="villes flex-fix">
 				<h2 class="tit"> Abidjan </h2>
 				<p class="para"> 29°, ensoleillé. </p>
@@ -70,7 +76,7 @@
 			<div class="villes flex-fix">
 				<h2 class="tit"> Paris </h2>
 				<p class="para"> -3°C, neige. </p>
-				<img class="met-img" src="neige.png" alt="Neige">
+				<img class="met-img" src="neige2.png" alt="Neige">
 			</div>
 			<div class="villes">
 				<h2 class="tit"> Genève </h2>
@@ -83,6 +89,11 @@
 	  
 		<p id="footer"> Chemela COULIBALY <br>
 		Icones Météo par <a href="https://thenounproject.com/linseedstudio/collection/weather/"> Linseed Studio </a> et <a href="https://thenounproject.com/Flatart/collection/weather/"> Flatart </a> </p>
+	
+	
+	
+	
+	
 	
 	
 	
